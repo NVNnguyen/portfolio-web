@@ -58,7 +58,6 @@ export default function Contact() {
 
   const resetForm = () => {
     setFormData({ name: "", email: "", message: "" });
-    setSubmitMessage(null);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {

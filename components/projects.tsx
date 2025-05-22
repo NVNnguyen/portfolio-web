@@ -1,19 +1,29 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Github, ExternalLink } from "lucide-react"
-import Image from "next/image"
-
+import { motion } from "framer-motion";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Github, ExternalLink } from "lucide-react";
+import Image from "next/image";
+import logo from "../assets/logo.png";
+import logoPis from "../assets/logoPis.jpg";
+import logoSROMS from "../assets/logoSROMS.png";
+import logoXTravis from "../assets/logoXTravis.png";
 export default function Projects() {
   const projects = [
     {
       title: "Real-Time Chat Application",
       description:
         "A full-stack real-time chat web application supporting one-on-one messaging with persistent chat history.",
-      image: "/placeholder.png?height=200&width=400",
+      image: logo,
       techStack: [
         "ReactJS",
         "Tailwind CSS",
@@ -38,9 +48,18 @@ export default function Projects() {
     },
     {
       title: "FPT University Student Management System",
-      description: "A web-based system to manage student information, courses, and grades for internal university use.",
-      image: "/placeholder.png?height=200&width=400",
-      techStack: ["JSP/Servlet", "HTML", "CSS", "SQL Server", "MVC Architecture", "GitHub", "Docker"],
+      description:
+        "A web-based system to manage student information, courses, and grades for internal university use.",
+      image: logoSROMS,
+      techStack: [
+        "JSP/Servlet",
+        "HTML",
+        "CSS",
+        "SQL Server",
+        "MVC Architecture",
+        "GitHub",
+        "Docker",
+      ],
       points: [
         "Developed a web-based system to manage student information, courses, and grades for internal university use.",
         "Built backend logic using JSP and Servlet, following the MVC architecture to separate concerns and improve maintainability.",
@@ -56,7 +75,7 @@ export default function Projects() {
       title: "Social Media Mobile App",
       description:
         "A cross-platform social networking app inspired by Locket and Threads, focusing on real-time photo sharing and short message interactions.",
-      image: "/placeholder.png?height=200&width=400",
+      image: logoPis,
       techStack: ["React Native", "Java Spring Boot", "AWS", "Docker", "Git"],
       points: [
         "Built a cross-platform social networking app inspired by Locket and Threads, focusing on real-time photo sharing and short message interactions.",
@@ -72,7 +91,7 @@ export default function Projects() {
       title: "Multiple Camera Tracking Search System",
       description:
         "An AI-powered system to track and search individuals across multiple cameras using deep learning models.",
-      image: "/placeholder.png?height=200&width=400",
+      image: logoXTravis,
       techStack: [
         "ReactJS",
         "TailwindCSS",
@@ -96,7 +115,7 @@ export default function Projects() {
       github: "https://github.com/NVNnguyen",
       demo: "#",
     },
-  ]
+  ];
 
   return (
     <section id="projects" className="py-20 px-4 bg-white dark:bg-gray-900">
@@ -108,7 +127,9 @@ export default function Projects() {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900 dark:text-white">Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900 dark:text-white">
+            Projects
+          </h2>
           <div className="w-20 h-1 bg-green-600 mx-auto mb-8"></div>
         </motion.div>
 
@@ -127,11 +148,13 @@ export default function Projects() {
                     src={project.image || "/placeholder.png"}
                     alt={project.title}
                     fill
-                    className="object-cover transition-transform duration-300 hover:scale-105"
+                    className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-xl font-bold">{project.title}</CardTitle>
+                  <CardTitle className="text-xl font-bold">
+                    {project.title}
+                  </CardTitle>
                   <CardDescription>{project.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="flex-grow">
@@ -142,7 +165,9 @@ export default function Projects() {
                       </Badge>
                     ))}
                     {project.techStack.length > 5 && (
-                      <Badge variant="outline">+{project.techStack.length - 5} more</Badge>
+                      <Badge variant="outline">
+                        +{project.techStack.length - 5} more
+                      </Badge>
                     )}
                   </div>
                   <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
@@ -153,13 +178,25 @@ export default function Projects() {
                 </CardContent>
                 <CardFooter className="flex justify-end gap-2">
                   <Button variant="outline" size="sm" className="gap-1" asChild>
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Github className="h-4 w-4" />
                       Code
                     </a>
                   </Button>
-                  <Button size="sm" className="gap-1 bg-green-600 hover:bg-green-700" asChild>
-                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                  <Button
+                    size="sm"
+                    className="gap-1 bg-green-600 hover:bg-green-700"
+                    asChild
+                  >
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <ExternalLink className="h-4 w-4" />
                       Demo
                     </a>
@@ -171,5 +208,5 @@ export default function Projects() {
         </div>
       </div>
     </section>
-  )
+  );
 }

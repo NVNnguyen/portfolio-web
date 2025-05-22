@@ -1,8 +1,8 @@
-import { Linkedin, Github, Mail } from "lucide-react"
+import { Linkedin, Github, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-12 px-4">
+    <footer className="bg-green-600 text-white py-12 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
@@ -43,9 +43,12 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Viet Nguyen Ngo. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Viet Nguyen Ngo. All rights
+            reserved.
+          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

@@ -25,7 +25,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Viet Nguyen Ngo" }],
   creator: "Viet Nguyen Ngo",
-  generator: "v0.dev",
+  icons: {
+    icon: "/imageAvatar.jpg",
+  },
 };
 
 export default function RootLayout({

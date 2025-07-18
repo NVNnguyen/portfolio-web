@@ -1,17 +1,18 @@
-"use client";
+'use client';
 
-import MouseParticles from "react-mouse-particles";
+import dynamic from 'next/dynamic';
 
-const CastedParticles = MouseParticles as any;
+
+const MouseParticles = dynamic(() => import('react-mouse-particles'), {
+  ssr: false,
+});
 
 export default function MouseParticlesWrapper() {
   return (
-    <CastedParticles
+    <MouseParticles
       g={1}
-      num={6}
       color="random"
-      cull="stats,image-wrapper"
-      level={6}
+      cull="col,image-wrapper"
     />
   );
 }

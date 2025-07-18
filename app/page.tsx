@@ -7,7 +7,6 @@ import Education from "@/components/education";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import { AnimatedBackground } from "@/components/ui/animated-background";
-
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -33,6 +32,7 @@ export default function Home() {
         <Contact />
       </AnimatedBackground>
       <Footer />
+     
     </main>
   );
 }

@@ -5,6 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/navbar";
 import AnimatedBackground from "@/components/animated-background";
+import MouseParticlesWrapper from "@/components/MouseParticlesWrapper";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
@@ -47,6 +48,7 @@ export default function RootLayout({
           <AnimatedBackground />
           <Navbar />
           {children}
+          <MouseParticlesWrapper />
         </ThemeProvider>
       </body>
     </html>
